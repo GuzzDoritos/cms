@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Setting themes variables */
+.lighttheme {
+    --fontColor: black;
+    --bgColor: white;
+    --navbarColor: #ff4249;
+    --navbarFontColor: white;
+    --highlightColor: yellow;
+    --buttonColor: white;
+    --buttonBackgroundColor: black; 
+}
+
+.darktheme {
+    --fontColor: white;
+    --bgColor: black; 
+    --navbarColor: #ff4249;
+    --highlightColor: purple;
+    --buttonColor: black;
+    --buttonBackgroundColor: white; 
+}
+
+/* Setting basic body rules */
+body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--fontColor);
+    background-color: var(--bgColor);
+}
+
+/* Navigation bar stuff */
+.navbar {
+    background-color: var(--navbarColor);
+    color: var(--navbarFontColor);
+    justify-content: space-between;
+    display: flex;
+    filter: drop-shadow(0px 5px 5px #690005);
+}
+
+.navbar-left > *, .navbar-right > * {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar-left > * {
+    color: var(--navbarFontColor);
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.navbar a:hover {
+    color: var(--highlightColor);
+    font-weight: bold;
+}
+
+#interruptor {
+    border: none;
+    border-radius: 5px;
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+}    
+
+input {
+    width: 50%;
+}
+
+/* Main content */
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-container {
+    margin: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 70%;
+    border: 2px solid var(--fontColor);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1;
+}
+
+#kirby {
+    max-width: 30%;
+    object-fit: contain;
+}
+
+/* Footer */
+.footer-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    background-color: #690005;
+    color: white;
+}
+
+.footer-container > * {
+    padding: 10px;
+    margin: auto;
+}
+
+.footer-container h1 {
+    font-size: 20px;
+}
+
+.socials, a {
+    color: white;
+    text-decoration: none;
+}
+
+svg {
+    width: 30px;
+}
+
+/* Media query */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: large;
+    }
+    
+    .navbar-left div:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+
+    .content-container {
+        margin: auto;
+        margin-top: 50px;
+        max-width: 80%;
+    }
+}
