@@ -129,6 +129,7 @@ svg {
     }
     
     .navbar-left div:not(:first-child) {display: none;}
+    .navbar-right div:not(:first-child) {display: none;}
     .navbar a.icon {
       float: right;
       display: block;
@@ -137,6 +138,7 @@ svg {
     .content-container {
         margin: auto;
         margin-top: 50px;
+        margin-bottom: 30px;
         max-width: 80%;
     }
 }
