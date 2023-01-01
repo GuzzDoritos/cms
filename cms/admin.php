@@ -36,12 +36,13 @@ function login() {
 
     if (isset($_POST['login'])) {
         if ($_POST['username'] == ADMIN_USERNAME && $_POST['password'] == ADMIN_PASSWORD) {
-            $_SESSION['username'] == ADMIN_USERNAME;
+            $_SESSION['username'] = ADMIN_USERNAME;
             header("Location: admin.php");
         } else {
             $results['errorMessage'] = "Incorrect username or password u silly goose!";
             require(TEMPLATE_PATH . "/admin/loginForm.php");
         }
+        
     } else {
         require(TEMPLATE_PATH . "/admin/loginForm.php");
     }
