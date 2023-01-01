@@ -1,0 +1,26 @@
+<?php include "templates/include/header.php" ?>
+
+    <ul id="headlines">
+
+    <?php foreach ($results['articles'] as $article) { ?>
+
+        <li>
+            <h2>
+                <span class="pubDate">
+                    <?php echo date('j F', $article->publicationDate) ?>
+                </span>
+                <a href=".?action=viewArticle&amp;articleId=<?php echo $article->id ?>">
+                    <?php echo htmlspecialchars($article->title) ?>
+                </a>
+            </h2>
+        </li>
+
+        <?php } ?>
+
+    </ul>
+
+    <p>
+        <a href="./?action=archive">Listing Articles</a>
+    </p>
+
+    <?php include "templates/include/footer.php"?>

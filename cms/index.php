@@ -21,7 +21,7 @@ function archive()
     $results['articles'] = $data['results'];
     $results['totalRows'] = $data['totalRows'];
     $results['pageTitle'] = "Article Listing - Guzz's Blog";
-    require(TEMPLATE_PATH . "/archive.php");
+    require(TEMPLATE_PATH . "/articles.php");
 }
 
 function viewArticle()
