@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title><?php echo htmlspecialchars($results['pageTitle']) ?></title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/cms/style.css">
     </head>
     <body>
         <div id="container">
