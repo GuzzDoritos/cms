@@ -4,17 +4,16 @@
     font-family: sans-serif;
 }
 
-.topnav {
+#footer-container {
+    margin: 0;
+    padding: 0;
     display: flex;
-    border-bottom: 3px solid black;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
 }
 
-#navbtn {
-    margin: 30px;
-    text-decoration: none;
-    color: black;
-}
-
-#navbtn:hover {
-    color: purple;
+.footer {
+    padding:10px;
+    margin:auto;
 }
