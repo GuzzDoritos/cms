@@ -39,7 +39,7 @@ function login() {
             $_SESSION['username'] == ADMIN_USERNAME;
             header("Location: admin.php");
         } else {
-            $results['errorMessage'] = "Incorrent username or password u silly goose!";
+            $results['errorMessage'] = "Incorrect username or password u silly goose!";
             require(TEMPLATE_PATH . "/admin/loginForm.php");
         }
     } else {
