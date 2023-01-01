@@ -6,11 +6,14 @@
 
 class Article
 {
-    public $id = null;
-    public $publicationDate = null;
-    public $title = null;
-    public $summary = null;
-    public $content = null;
+    /* setting properties */
+    public $id = null; // article id from db
+    public $publicationDate = null; // when it was posted
+    public $title = null; // its title
+    public $summary = null; // brief description
+    public $content = null; // the meat
+
+      /* le methods for manipulating data */
 
     public function __construct($data = array())
     {
@@ -35,8 +38,8 @@ class Article
             $publicationDate = explode('-', $params['publicationDate']);
 
             if (count($publicationDate) == 3) {
-                list($d, $m, $y) = $publicationDate;
-                $this->publicationDate = mktime(0, 0, 0, $d, $m, $y);
+                list($y, $m, $d) = $publicationDate;
+                $this->publicationDate = mktime(0, 0, 0, $m, $d, $y);
             }
         }
     }
