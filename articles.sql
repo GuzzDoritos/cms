@@ -3,7 +3,7 @@ CREATE TABLE articles
 (
     id smallint unsigned NOT NULL auto_increment,
     publicationDate date NOT NULL,
-    title date NOT NULL,
+    title text NOT NULL,
     summary text NOT NULL,
     content mediumtext NOT NULL,
 
