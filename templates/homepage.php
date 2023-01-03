@@ -1,26 +1,27 @@
 <?php include "templates/include/header.php" ?>
 
-    <ul id="headlines">
+<link rel="stylesheet" href="templates/styling/homepage.css">
+
+<div id="headlines">
 
     <?php foreach ($results['articles'] as $article) { ?>
 
-        <li>
-            <h2>
-                <span class="pubDate">
-                    <?php echo date('j F', $article->publicationDate) ?>
-                </span>
-                <a href=".?action=viewArticle&amp;articleId=<?php echo $article->id ?>">
-                    <?php echo htmlspecialchars($article->title) ?>
-                </a>
-            </h2>
-        </li>
+        <div class="articlerow">
+            <span class="pubDate">
+                <?php echo strtoupper(date('j F Y', $article->publicationDate)) ?>
+            </span>
+            <div class="contentcontainer">
+                <div class="content">
+                    <a href=".?action=viewArticle&amp;articleId=<?php echo $article->id ?>">
+                        <?php echo htmlspecialchars($article->title) ?>
+                    </a>
+                </div>
+                <div class="summary">
+                    <?php echo $article->summary ?>
+                </div>
+            </div>
+        </div>
 
         <?php } ?>
-
-    </ul>
-
-    <p>
-        <a href="./?action=archive">Listing Articles</a>
-    </p>
-
+</div>
     <?php include "templates/include/footer.php"?>
