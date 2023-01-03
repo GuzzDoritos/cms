@@ -95,7 +95,7 @@ class Article
         $this->id = $conn->lastInsertId();
         $conn = null;
     }
-    public function update()
+    public function update() //gives off error for some reason. will look into later
     {
         if (is_null($this->id))
             trigger_error("Article::update(): Attempt to update an Article object that does not have its ID property set.", E_USER_ERROR);
