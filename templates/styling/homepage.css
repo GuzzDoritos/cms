@@ -1,0 +1,18 @@
+.articlerow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pubDate {
+    margin-left: 20px;
+    letter-spacing: 0.3em;
+}
+
+.contentcontainer {
+    display: flex;
+}
+
+.content, .summary {
+    margin: 10px;
+}
