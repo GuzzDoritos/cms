@@ -6,4 +6,10 @@
     </head>
     <body>
         <div id="container">
-            <a href="."><img id="logo" src="templates/include/images/logo.png" alt="Guzz's Blog"></a>
+            <div class="navbar">
+                <a href="."><img id="logo" src="templates/include/images/logo.png" alt="Guzz's Blog"></a>
+                <div class="navbtn"> 
+                    <a href="./?action=archive">All Articles</a>                               
+                </div>                
+            </div>
+            <hr style="margin-bottom: 10px;">
