@@ -7,9 +7,10 @@
     <?php foreach ($results['articles'] as $article) { ?>
 
         <div class="articlerow">
-            <span class="pubDate">
-                <?php echo strtoupper(date('j F Y', $article->publicationDate)) ?>
-            </span>
+            <div class="date">
+                <span id="month"><?php echo strtoupper(date('F', $article->publicationDate)) ?></span>
+                <span id="day"><?php echo strtoupper(date('j', $article->publicationDate)) ?></span>
+            </div>
             <div class="contentcontainer">
                 <div class="content">
                     <a href=".?action=viewArticle&amp;articleId=<?php echo $article->id ?>">
@@ -17,7 +18,7 @@
                     </a>
                 </div>
                 <div class="summary">
-                    <?php echo $article->summary ?>
+                    <em><?php echo $article->summary ?></em>
                 </div>
             </div>
         </div>
