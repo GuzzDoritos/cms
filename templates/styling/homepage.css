@@ -1,18 +1,43 @@
 .articlerow {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    font-size: 1.5em;
     width: 100%;
+    height: 500px;
 }
 
-.pubDate {
-    margin-left: 20px;
-    letter-spacing: 0.3em;
+.date {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    background-color:crimson;
+}
+
+#month {
+    font-size: 0.6em;
+}
+
+#day {
+    font-size: 4em;
 }
 
 .contentcontainer {
-    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .content, .summary {
-    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.content {
+    font-size: 1.8em;
+
+}
+
+.summary {
+    font-size: 0.8em;
 }
