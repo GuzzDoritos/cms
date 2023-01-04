@@ -95,7 +95,7 @@ class Article
         $this->id = $conn->lastInsertId();
         $conn = null;
     }
-    public function update() //gives off error for some reason. will look into later
+    public function update()
     {
         if (is_null($this->id))
             trigger_error("Article::update(): Attempt to update an Article object that does not have its ID property set.", E_USER_ERROR);
@@ -107,6 +107,7 @@ class Article
         $st->bindValue(":title", $this->title, PDO::PARAM_STR);
         $st->bindValue(":summary", $this->summary, PDO::PARAM_STR);
         $st->bindValue(":content", $this->content, PDO::PARAM_STR);
+        $st->bindValue( ":id", $this->id, PDO::PARAM_INT );
         $st->execute();
         $conn = null;
     }
