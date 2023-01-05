@@ -4,6 +4,10 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: #b0cced;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -26,11 +30,15 @@
 
 .navbtn:hover a {
     color: white;
-    background-color: black;
+    background: linear-gradient(azure, blue, azure);
 }
 
-.navbar, #footer-container {
-    background-color: azure;
+.navbar {
+    background: linear-gradient(azure,#edd1b0);
+}
+
+#footer-container {
+    background: linear-gradient(#edd1b0,azure);
 }
 
 #footer-container {
@@ -45,16 +53,14 @@
 }
 
 #restricted {
-    background-color: white;
-    color: black;
+    background: black;
+    color: white;
     text-decoration: none;
     padding: 4px;
-    border: 3px solid black;
     border-radius: 10px;
 }
 
 #restricted:hover {
-    background-color: red;
+    background: linear-gradient( red, darkgray, red);
     color: white;
-    border-color: gray;
 }
