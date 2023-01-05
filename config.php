@@ -10,6 +10,7 @@ define("TEMPLATE_PATH", "templates");
 define("HOMEPAGE_NUM_ARTICLES", 5);
 define("ADMIN_USERNAME", "guzz");
 define("ADMIN_PASSWORD", "reimu");
+define("PAGE_TITLE_SUFFIX", " | Guzz's Blog");
 require(CLASS_PATH . "/Article.php");
 
 function handleException($exception) {
