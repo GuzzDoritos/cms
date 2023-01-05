@@ -1,18 +1,17 @@
 <?php include "templates/include/header.php" ?>
 
-        <h1 style="width: 75%;">
-            <?php echo htmlspecialchars( $results['article']->title) ?>
-        </h1>
-        <div style="width: 75%; font-style: italic;">
+<link rel="stylesheet" href="templates/styling/viewArticle.css">
+
+
+        <div class="title" style="width: 75%;">            
+            <h1><?php echo htmlspecialchars( $results['article']->title) ?></h1>
+            <div class="pubDate">Published on <?php echo date('j F Y', $results['article']->publicationDate) ?></div>
+        </div>
+        <div class="summary" style="width: 75%; font-style: italic;">
             <?php echo htmlspecialchars($results['article']->summary) ?>
         </div>
-        <div style="width: 75%;">
+        <hr>
+        <div class="content" style="width: 65%;">
             <?php echo $results['article']->content ?>
         </div>
-        <p class="pubDate">Published on <?php echo date('j F Y', $results['article']->publicationDate) ?></p>
-
-        <p>
-            <a href="./">Return to Index</a>
-        </p>
-
 <?php include "templates/include/footer.php"?>
