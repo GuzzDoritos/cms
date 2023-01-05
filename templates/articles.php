@@ -1,34 +1,32 @@
 <?php include "templates/include/header.php" ?>
 
-        <h1>Listing Articles</h1>
+<link rel="stylesheet" href="templates/styling/list.css">
+<link rel="stylesheet" href="templates/styling/admin/listArticles.css">
 
-        <ul id="headlines" class="archive">
+<div id="totalrows">
+    <b style="font-size: 1.5em;"><?php echo $results['totalRows']?> article<?php echo($results['totalRows'] != 1) ? 's' : '' ?></b> in total.
+</div>
 
-<?php foreach($results['articles'] as $article) {?>
+<div id="headlines">
 
-            <li>
-                <h2>
-                    <span class="pubDate">
-                        <?php echo date('j F Y', $article->publicationDate)?>
-                    </span>
-                    <a href=".?action=viewArticle&amp;articleId=<?php echo $article->id?>">
-                        <?php echo htmlspecialchars($article->title)?>
+    <?php foreach ($results['articles'] as $article) { ?>
+
+        <div class="articlerow">
+            <div class="date">
+                <span id="month"><?php echo strtoupper(date('F', $article->publicationDate)) ?></span>
+                <span id="day"><?php echo strtoupper(date('j', $article->publicationDate)) ?></span>
+            </div>
+            <div class="contentcontainer">
+                <div class="content">
+                    <a href=".?action=viewArticle&amp;articleId=<?php echo $article->id ?>">
+                        <?php echo htmlspecialchars($article->title) ?>
                     </a>
-                </h2>
-                    <p class="summary">
-                        <?php echo htmlspecialchars($article->summary)?>
-                    </p>
-            </li>
+                </div>
+                <div class="summary">
+                    <em><?php echo $article->summary ?></em>
+                </div>
+            </div>
+        </div>
 
-<?php } ?>
-
-        </ul>
-        
-        <p>
-            <?php echo $results['totalRows']?> 
-            article<?php echo($results['totalRows'] != 1) ? 's' : '' ?> in total.
-        </p>
-
-        <p><a href="./">Return to Index</a></p>
-
+        <?php } ?>
 <?php include "templates/include/footer.php" ?>
