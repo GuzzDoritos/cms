@@ -1,0 +1,59 @@
+.formcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1em;
+}
+
+.row {
+    display: flex;
+    height: 100px;
+}
+
+.label, .input {
+    display: flex;
+    padding: 10px;
+}
+
+.label {
+    justify-content: right;
+    width: 20%;
+}
+
+.input {
+    width: 80%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 5px;
+    resize: none;
+}
+
+.buttons input {
+    height: 60px;
+}
+
+#publicationDate {
+    width: fit-content;
+}
+
+#title {
+    font-weight: bold;
+}
+
+#summary {
+    font-style: italic;
+}
+
+#content {
+    font-size: 1.3em;
+}
+
+#contentrow {
+    height: 300px;
+}
+
+#titlerow, #daterow {
+    height: fit-content;
+}
