@@ -32,7 +32,7 @@ switch($action) {
 
 function login() {
     $results = array();
-    $results['pageTitle'] = "Admin Login | Guzz's Blog";
+    $results['pageTitle'] = "Admin Login" . PAGE_TITLE_SUFFIX;
 
     if (isset($_POST['login'])) {
         if ($_POST['username'] == ADMIN_USERNAME && $_POST['password'] == ADMIN_PASSWORD) {
@@ -55,7 +55,7 @@ function logout() {
 
 function newArticle() {
     $results = array();
-    $results['pageTitle'] = "New Article";
+    $results['pageTitle'] = "New Article" . PAGE_TITLE_SUFFIX;
     $results['formAction'] = "newArticle";
 
     if(isset($_POST['saveChanges'])) {
@@ -73,7 +73,7 @@ function newArticle() {
 
 function editArticle(){
     $results = array();
-    $results['pageTitle'] = "Edit Article";
+    $results['pageTitle'] = "Edit Article" . PAGE_TITLE_SUFFIX;
     $results['formAction'] = "editArticle";
 
     if(isset($_POST['saveChanges'])) {
@@ -108,7 +108,7 @@ function listArticles() {
     $data = Article::getList();
     $results['articles'] = $data['results'];
     $results['totalRows'] = $data['totalRows'];
-    $results['pageTitle'] = "All Articles";
+    $results['pageTitle'] = "All Articles" . PAGE_TITLE_SUFFIX;
 
     if(isset($_GET['error'])){
         if ($_GET['error'] == "articleNotFound")
