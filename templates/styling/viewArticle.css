@@ -1,0 +1,26 @@
+.title {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.pubDate {
+    margin-left: 20px;
+}
+
+.summary {
+    padding-left: 15px;
+    margin: 20px;
+    border-left: 2px solid gray;
+}
+
+.content {
+    padding: 30px;
+    padding-left: 50px;
+    font-size: 1.3em;
+}
+
+p, h2 {
+    line-height: 2em;
+    margin-block: 1em;
+}
