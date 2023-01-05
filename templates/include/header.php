@@ -8,7 +8,7 @@
     <body>
         <div id="container">
             <div class="navbar">
-                <a href="."><img id="logo" src="templates/include/images/logo.png" alt="Guzz's Blog"></a>
+                <a href="."><img id="logo" src="templates/include/images/logo.png" alt="Guzz's Blog" style="padding:10px"></a>
                 <div class="navbtn"> 
                     <a href="./?action=archive">All Articles</a>                               
                 </div>                
