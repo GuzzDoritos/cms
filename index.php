@@ -20,7 +20,7 @@ function archive()
     $data = Article::getList();
     $results['articles'] = $data['results'];
     $results['totalRows'] = $data['totalRows'];
-    $results['pageTitle'] = "Article Listing - Guzz's Blog";
+    $results['pageTitle'] = "Article Listing" . PAGE_TITLE_SUFFIX;
     require(TEMPLATE_PATH . "/articles.php");
 }
 
@@ -33,7 +33,7 @@ function viewArticle()
 
     $results = array();
     $results['article'] = Article::getById((int) $_GET["articleId"]);
-    $results['pageTitle'] = $results['article']->title . " | Guzz's Blog";
+    $results['pageTitle'] = $results['article']->title . PAGE_TITLE_SUFFIX;
     require(TEMPLATE_PATH . "/viewArticle.php");
 }
 
@@ -43,7 +43,7 @@ function homepage()
     $data = Article::getList(HOMEPAGE_NUM_ARTICLES);
     $results['articles'] = $data['results'];
     $results['totalRows'] = $data['totalRows'];
-    $results['pageTitle'] = "Guzz's Blog";
+    $results['pageTitle'] = "Homepage" .  PAGE_TITLE_SUFFIX;
     require(TEMPLATE_PATH . "/homepage.php");
 }
 
