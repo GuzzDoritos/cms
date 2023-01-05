@@ -1,10 +1,12 @@
 <?php include "templates/include/header.php" ?>
 
+<link rel="stylesheet" href="templates/styling/admin/adminHeader.css">
+<link rel="stylesheet" href="templates/styling/admin/editArticle.css">
+
 <div id="adminHeader">
-    <h2>Guzz's Blog</h2>
-    <p>you be logged in as thy highness <b>
+    <p>thou art logged in as thy highness <b>
             <?php echo htmlspecialchars($_SESSION['username']) ?>
-        </b>. <a href="admin.php?action=logout" ?>🚪 log out</a> </p>
+        </b>. <a style="text-decoration: none; color: yellow;" href="admin.php?action=logout" ?>🚪 log out</a> </p>
 </div>
 
 <h1><?php echo $results['pageTitle'] ?></h1>
@@ -18,36 +20,47 @@
         </div>
     <?php } ?>
 
-    <ul>
-        <li>
-            <label for="title">article title</label>
-            <input type="text" name="title" id="title" placeholder="name thy article" required autofocus maxlength="255" value="<?php echo htmlspecialchars($results['article']->title) ?>"/>
-        </li>
-
-        <li>
-            <label for="summary">article summary</label>
-            <textarea name="summary" id="summary" placeholder="describe thy topic" required maxlength="1000"
-                style="height: 5em;">
-                    <?php echo htmlspecialchars($results['article']->summary) ?>
-                </textarea>
-
-        <li>
-            <label for="content">article content</label>
-            <textarea name="content" id="content" placeholder="type thy wise words in here. html markup allowed!"
-                required maxlength="100000" style="height: 30em;">
-                    <?php echo htmlspecialchars($results['article']->content) ?>
-                </textarea>
-        </li>
-
-        <li>
-            <label for="publicationDate">publication date</label>
-            <input type="date" name="publicationDate" id="publicationDate" placeholder="YYYY-MM-DD" required
-                maxlength="10"
-                value="<?php echo $results['article']->publicationDate ? date("Y-m-d", $results['article']->publicationDate) : "" ?>">
-        </li>
-
-    </ul>
-
+    <div class="formcontainer">
+        <div class="row" id="titlerow">
+            <div class="label">
+                <label for="title">article title</label>
+            </div>
+            <div class="input">
+                <input type="text" name="title" id="title" placeholder="name thy article" required autofocus
+                    maxlength="255" value="<?php echo htmlspecialchars($results['article']->title) ?>" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="label">
+                <label for="summary">article summary</label>
+            </div>
+            <div class="input">
+                <textarea name="summary" id="summary" placeholder="describe thy topic" required
+                    maxlength="1000"><?php echo htmlspecialchars($results['article']->summary) ?></textarea>
+            </div>
+        </div>
+        <div class="row" id="contentrow">
+            <div class="label">
+                <label for="content">article content</label>
+            </div>
+            <div class="input">
+                <textarea name="content" id="content" placeholder="type thy wise words in here. html markup allowed!"
+                    required maxlength="100000"><?php echo htmlspecialchars($results['article']->content) ?></textarea>
+            </div>
+        </div>
+        <div class="row" id="daterow">
+            <div class="label">
+                <label for="publicationDate">publication date</label>
+            </div>
+            <div class="input">
+                <input type="date" name="publicationDate" id="publicationDate" placeholder="YYYY-MM-DD" required
+                    maxlength="10" value="<?php echo $results['article']->publicationDate
+                        ? date("Y-m-d", $results['article']->publicationDate)
+                        : ""
+                        ?>">
+            </div>
+        </div>
+    </div>
     <div class="buttons">
         <input type="submit" name="saveChanges" value="save changes">
         <input type="submit" formnovalidate name="cancel" value="cancel">
