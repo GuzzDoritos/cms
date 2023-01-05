@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <title><?php echo htmlspecialchars($results['pageTitle']) ?></title>
-        <link rel="stylesheet" href="/cms/style.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     </head>
     <body>
         <div id="container">
