@@ -34,18 +34,14 @@
 }
 
 #footer-container {
-    margin: 0;
-    padding: 0;
-    height: 100px;
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
     align-items: center;
+    height: 150px;
 }
 
 .footer {
     padding:10px;
-    margin:auto;
 }
 
 #restricted {
